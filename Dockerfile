@@ -1,7 +1,7 @@
 FROM almalinux/10-kitten-base
 
 LABEL maintainer="Unicon, Inc."
-ENV SHIB_VERSION "3.1.0-3.1"
+ENV SHIB_VERSION="3.1.0-3.1"
 
 #Workaround since OpenSUSE's provo-mirror is not working properly
 COPY shibboleth.repo /etc/yum.repos.d/security:shibboleth.repo
