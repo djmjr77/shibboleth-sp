@@ -1,4 +1,4 @@
-FROM centos:centos7
+FROM almalinux/10-kitten-base
 
 LABEL maintainer="Unicon, Inc."
 ENV SHIB_VERSION "3.1.0-3.1"
