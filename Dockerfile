@@ -7,7 +7,7 @@ ENV SHIB_VERSION="3.1.0-3.1"
 COPY shibboleth.repo /etc/yum.repos.d/security:shibboleth.repo
 
 RUN yum -y update \
-    && yum -y install httpd shibboleth-$SHIB_VERSION mod_ssl \
+    && yum -y install httpd shibboleth-$SHIB_VERSION mod_ssl --skip-broken \
     && yum -y clean all
 
 COPY httpd-shibd-foreground /usr/local/bin/
