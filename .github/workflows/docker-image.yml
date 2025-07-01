@@ -10,10 +10,10 @@ jobs:
 
   build:
 
-    runs-on: linux/amd64
+    runs-on: ubuntu-latest
 
     steps:
     - name: checkout
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag shibboleth-sp:latest
+      run: docker build ./ --tag shibboleth-sp:latest
